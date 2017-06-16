@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="0ccb82c4-356e-423e-b143-e66aa34d9966" name="Versio hosting" url="http://185.182.59.5">
+        <fileTransfer host="185.182.59.5" port="21" rootFolder="/public_html/beta">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
