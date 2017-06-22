@@ -381,6 +381,7 @@ if ($this->validsupplier()) {
         'ai_country' => $this->input->post('country'),
         'ai_address_1' => $this->input->post('address1'),
         'ai_address_2' => $this->input->post('address2'),
+        'ai_birth_date' => $this->input->post('geboortedatum'),
         'ai_mobile' => $this->input->post('mobile'),
         'ai_image' => $filename,
         'accounts_updated_at' => $now);

@@ -64,6 +64,12 @@
           <input class="form-control" type="text" placeholder="Full address" name="address2" value="<?php echo $profile[0]->ai_address_2;?>">
         </div>
       </div>
+        <div class="col-md-6">
+            <div class="form-group ">
+                <label class="required">Geboortedatum</label>
+                <input class="form-control" type="text" placeholder="Geboortedatum" name="geboortedatum" value="<?php echo $profile[0]->ai_birth_date;?>">
+            </div>
+        </div>
       <?php if(empty($isSuperAdmin)){ ?>
       <div class="col-md-6">
         <div class="col-md-12">

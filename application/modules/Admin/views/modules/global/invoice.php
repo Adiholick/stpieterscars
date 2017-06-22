@@ -116,7 +116,7 @@
         <h4 class="modal-title"><?php echo trans('0355');?></h4>
       </div>
       <div class="modal-body">
-        <?php echo "banktransfer"; ?>
+        <?php echo "Overschrijving"; ?>
       </div>
     </div>
   </div>

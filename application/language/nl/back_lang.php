@@ -1,7 +1,7 @@
 <?php
 
 $L1["01"] = "Dashboard";
-$L1["02"] = "Frontend";
+$L1["02"] = "Website";
 $L1["03"] = "Algemeen";
 $L1["04"] = "Instellingen";
 $L1["05"] = "Betaal methodes";

@@ -54,7 +54,7 @@ class Accounts_model extends CI_Model {
 
         $data1 = array('ai_title' => "", 'ai_first_name' => $this->input->post('fname'), 'ai_last_name' => $this->input->post('lname'),
 // 'ai_dob' => $this->input->post('dob'),
-        'ai_city' => $this->input->post('city'), 'ai_state' => $this->input->post('state'), 'ai_country' => $this->input->post('country'), 'ai_address_1' => $this->input->post('address1'), 'ai_address_2' => $this->input->post('address2'), 'ai_mobile' => $this->input->post('mobile'),
+        'ai_city' => $this->input->post('city'), 'ai_state' => $this->input->post('state'), 'ai_country' => $this->input->post('country'), 'ai_address_1' => $this->input->post('address1'), 'ai_address_2' => $this->input->post('address2'), 'ai_birth_date' => $this->input->post('geboortedatum'), 'ai_mobile' => $this->input->post('mobile'),
 // 'ai_fax' => $this->input->post('fax'),
 // 'ai_postal_code' => $this->input->post('postal_code'),
 // 'ai_passport' => $this->input->post('passport'),
@@ -123,7 +123,7 @@ class Accounts_model extends CI_Model {
 //update customer profile
     function update_profile_customer($id){
         $now = date("Y-m-d H:i:s");
-        $data = array('ai_title' => "", 'ai_first_name' => $this->input->post('firstname'), 'ai_last_name' => $this->input->post('lastname'), 'ai_city' => $this->input->post('city'), 'ai_state' => $this->input->post('state'), 'ai_country' => $this->input->post('country'), 'ai_address_1' => $this->input->post('address1'), 'ai_address_2' => $this->input->post('address2'), 'ai_mobile' => $this->input->post('phone'), 'ai_fax' => $this->input->post('fax'), 'ai_postal_code' => $this->input->post('zip'), 'accounts_updated_at' => $now);
+        $data = array('ai_title' => "", 'ai_first_name' => $this->input->post('firstname'), 'ai_last_name' => $this->input->post('lastname'), 'ai_city' => $this->input->post('city'), 'ai_state' => $this->input->post('state'), 'ai_country' => $this->input->post('country'), 'ai_address_1' => $this->input->post('address1'), 'ai_address_2' => $this->input->post('address2'),'ai_birth_date' => $this->input->post('geboortedatum'), 'ai_mobile' => $this->input->post('phone'), 'ai_fax' => $this->input->post('fax'), 'ai_postal_code' => $this->input->post('zip'), 'ai_birth_date' => $this->input->post('geboortedatum'), 'accounts_updated_at' => $now);
         $data1 = array();
         $email = $this->input->post('email');
         if(!empty($email)){
@@ -158,7 +158,7 @@ class Accounts_model extends CI_Model {
         $appliedFor = "";
         }
 
-        $data = array('accounts_email' => $this->input->post('email'), 'accounts_password' => sha1($this->input->post('password')), 'accounts_type' => $type, 'accounts_is_admin' => $isadmin, 'ai_title' => "", 'ai_first_name' => $this->input->post('fname'), 'ai_last_name' => $this->input->post('lname'), 'ai_dob' => $this->input->post('dob'), 'ai_city' => $this->input->post('city'), 'ai_country' => $this->input->post('country'), 'ai_state' => $this->input->post('state'), 'ai_address_1' => $this->input->post('address1'), 'ai_address_2' => $this->input->post('address2'), 'ai_mobile' => $this->input->post('mobile'), 'ai_fax' => $this->input->post('fax'), 'ai_postal_code' => $this->input->post('postal_code'), 'ai_passport' => $this->input->post('passport'), 'ai_website' => $this->input->post('website'), 'ai_image' => $filename, 'accounts_created_at' => $now, 'accounts_updated_at' => $now, 'accounts_status' => $this->input->post('status'), 'accounts_permissions' => $permissions,'appliedfor' => $appliedFor);
+        $data = array('accounts_email' => $this->input->post('email'), 'accounts_password' => sha1($this->input->post('password')), 'accounts_type' => $type, 'accounts_is_admin' => $isadmin, 'ai_title' => "", 'ai_first_name' => $this->input->post('fname'), 'ai_last_name' => $this->input->post('lname'), 'ai_dob' => $this->input->post('dob'), 'ai_city' => $this->input->post('city'), 'ai_country' => $this->input->post('country'), 'ai_state' => $this->input->post('state'), 'ai_address_1' => $this->input->post('address1'), 'ai_address_2' => $this->input->post('address2'),'ai_birth_date' => $this->input->post('geboortedatum'), 'ai_mobile' => $this->input->post('mobile'), 'ai_fax' => $this->input->post('fax'), 'ai_postal_code' => $this->input->post('postal_code'), 'ai_passport' => $this->input->post('passport'), 'ai_website' => $this->input->post('website'), 'ai_image' => $filename, 'accounts_created_at' => $now, 'accounts_updated_at' => $now, 'accounts_status' => $this->input->post('status'), 'accounts_permissions' => $permissions,'appliedfor' => $appliedFor);
         $this->db->insert('pt_accounts', $data);
         $userid = $this->db->insert_id();
         //hotels Assign
@@ -189,7 +189,7 @@ class Accounts_model extends CI_Model {
         $appliedFor = json_encode(array("appliedfor" => $this->input->post('applyfor'), "name" => $this->input->post('itemname')));
 
         $password = rand(5, 15);
-        $data = array('accounts_email' => $this->input->post('email'), 'accounts_password' => $password, 'accounts_type' => "supplier", 'accounts_is_admin' => 0, 'ai_title' => "", 'ai_first_name' => $this->input->post('fname'), 'ai_last_name' => $this->input->post('lname'), 'ai_city' => $this->input->post('city'), 'ai_country' => $this->input->post('country'), 'ai_state' => $this->input->post('state'), 'ai_address_1' => $this->input->post('address1'), 'ai_address_2' => $this->input->post('address2'), 'ai_mobile' => $this->input->post('mobile'),
+        $data = array('accounts_email' => $this->input->post('email'), 'accounts_password' => $password, 'accounts_type' => "supplier", 'accounts_is_admin' => 0, 'ai_title' => "", 'ai_first_name' => $this->input->post('fname'), 'ai_last_name' => $this->input->post('lname'), 'ai_city' => $this->input->post('city'), 'ai_country' => $this->input->post('country'), 'ai_state' => $this->input->post('state'), 'ai_address_1' => $this->input->post('address1'), 'ai_address_2' => $this->input->post('address2'),'ai_birth_date' => $this->input->post('geboortedatum'), 'ai_mobile' => $this->input->post('mobile'),
 //  'ai_image' => $filename,
         'accounts_created_at' => $now, 'accounts_updated_at' => $now, 'appliedfor' => $appliedFor,'accounts_verified' => 0, 'accounts_status' => 'no');
         $this->db->insert('pt_accounts', $data);
@@ -268,6 +268,7 @@ class Accounts_model extends CI_Model {
         $this->db->like('accounts_email', $term);
         $this->db->or_like('ai_address_1', $term);
         $this->db->or_like('ai_address_2', $term);
+        $this->db->or_like('ai_birth_date', $term);
         $this->db->or_like('ai_last_name', $term);
         $this->db->or_like('ai_first_name', $term);
         $this->db->order_by('accounts_id', 'desc');

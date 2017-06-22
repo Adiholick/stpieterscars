@@ -70,6 +70,12 @@ echo $validationerrors; ?>
           <input class="form-control" type="text" placeholder="Full address" name="address2" value="<?php echo setFrmVal(@$profile[0]->ai_address_2,set_value('address2')); ?>">
         </div>
       </div>
+        <div class="col-md-6">
+            <div class="form-group ">
+                <label class="required">Geboortedatum</label>
+                <input class="form-control" type="text" placeholder="Geboortedatum" name="geboortedatum" value="<?php echo setFrmVal(@$profile[0]->ai_birth_date,set_value('geboortedatum')); ?>">
+            </div>
+        </div>
       <div class="clearfix"></div>
       <div class="col-md-6">
         <div class="col-md-4">

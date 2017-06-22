@@ -4180,6 +4180,7 @@ CREATE TABLE `pt_accounts` (
   `ai_city` varchar(250) DEFAULT NULL,
   `ai_address_1` text,
   `ai_address_2` text,
+  `ai_birth_date` text,
   `ai_mobile` varchar(20) DEFAULT NULL,
   `ai_fax` int(20) DEFAULT NULL,
   `ai_postal_code` varchar(50) DEFAULT NULL,
@@ -4202,7 +4203,7 @@ CREATE TABLE `pt_accounts` (
 -- Dumping data for table `pt_accounts`
 --
 
-INSERT INTO `pt_accounts` (`accounts_id`, `ai_title`, `ai_first_name`, `ai_last_name`, `accounts_email`, `accounts_password`, `ai_dob`, `ai_country`, `ai_state`, `ai_city`, `ai_address_1`, `ai_address_2`, `ai_mobile`, `ai_fax`, `ai_postal_code`, `ai_passport`, `ai_website`, `ai_image`, `accounts_type`, `accounts_is_admin`, `accounts_created_at`, `accounts_updated_at`, `accounts_status`, `accounts_verified`, `accounts_last_login`, `accounts_permissions`, `appliedfor`, `facebook_id`) VALUES
+INSERT INTO `pt_accounts` (`accounts_id`, `ai_title`, `ai_first_name`, `ai_last_name`, `accounts_email`, `accounts_password`, `ai_dob`, `ai_country`, `ai_state`, `ai_city`, `ai_address_1`, `ai_address_2`, `ai_birth_date`, `ai_mobile`, `ai_fax`, `ai_postal_code`, `ai_passport`, `ai_website`, `ai_image`, `accounts_type`, `accounts_is_admin`, `accounts_created_at`, `accounts_updated_at`, `accounts_status`, `accounts_verified`, `accounts_last_login`, `accounts_permissions`, `appliedfor`, `facebook_id`) VALUES
 (1, '', 'Super', 'Admin', 'admin@phptravels.com', '6f4504dd6d8322708f1aa68a05c7ca9cfc2ee782', '0', 'US', '0', '0', 'address 1', 'address 2', '123456789', 0, '0', '0', '0', '', 'webadmin', 1, '1901-02-16 11:41:04', '2016-10-14 14:24:54', 'yes', 1, 1490120026, '0', '', NULL),
 (14, '0', 'John', 'Smith', 'user@phptravels.com', '39babc332b412604066644a894d9f47b8fe2ad42', NULL, 'AU', '', '', 'R2, Avenue du Maroc', '', '123456', 0, '52000', NULL, NULL, NULL, 'customers', 0, '2014-04-16 12:51:46', '2016-01-13 07:03:35', 'yes', 1, NULL, NULL, NULL, NULL),
 (15, '', 'ateeq', 'yousaf', 'atiqueyousaf11@gmail.com', '7b52009b64fd0a2a49e6d8a939753077792b0554', NULL, 'PK', NULL, NULL, 'lahore', NULL, '03157696461', NULL, NULL, NULL, NULL, NULL, 'guest', 0, '2016-12-26 12:28:29', '2016-12-26 12:28:29', '', 1, NULL, NULL, NULL, NULL),

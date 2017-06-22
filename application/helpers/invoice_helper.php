@@ -5,7 +5,7 @@ if ( ! function_exists('invoiceDetails'))
     function invoiceDetails($id,$ref,$reviewData = null)
     {
       $CI = get_instance();
-        $CI->db->select('pt_bookings.*,pt_accounts.ai_mobile,pt_accounts.accounts_id,pt_accounts.ai_country,pt_accounts.accounts_email,pt_accounts.ai_first_name,pt_accounts.ai_last_name,pt_accounts.ai_address_1,pt_accounts.ai_address_2');
+        $CI->db->select('pt_bookings.*,pt_accounts.ai_mobile,pt_accounts.accounts_id,pt_accounts.ai_country,pt_accounts.accounts_email,pt_accounts.ai_first_name,pt_accounts.ai_last_name,pt_accounts.ai_address_1,pt_accounts.ai_address_2,pt_accounts.ai_birth_date');
         $CI->db->where('pt_bookings.booking_id',$id);
         $CI->db->where('pt_bookings.booking_ref_no',$ref);
         $CI->db->join('pt_accounts','pt_bookings.booking_user = pt_accounts.accounts_id','left');
